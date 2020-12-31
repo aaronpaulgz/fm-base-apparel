@@ -29,7 +29,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  margin: o auto;
+  margin: 0 auto;
   background: var(--Gradient-1);
 }
 
@@ -132,7 +132,9 @@ body {
 }
 
 .form button:hover {
-  /* box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); */
+  -webkit-box-shadow: 12px 20px 64px 22px rgba(133, 93, 109, 0.32);
+  -moz-box-shadow: 12px 20px 64px 22px rgba(133, 93, 109, 0.32);
+  box-shadow: 12px 20px 64px 22px rgba(133, 93, 109, 0.32);
 }
 
 .form button img {
@@ -144,7 +146,7 @@ body {
   z-index: 3;
   right: 92px;
   top: 20px;
-  visibility: hidden;
+  display: none;
 }
 
 #errTxt {
@@ -155,7 +157,98 @@ body {
 .errTxt--container {
   width: 100%;
   text-align: left;
-  padding: 0 48px;
+  padding: 4px 48px;
   color: var(--Soft-Red);
   font-weight: 600;
+}
+
+.desktop-logo {
+  display: none;
+}
+
+.hero {
+  display: none;
+}
+
+@media screen and (min-width: 720px) {
+  .desktop-logo {
+    display: block;
+    width: 100%;
+  }
+
+  .desktop-logo img {
+    padding: 24px 0 0 72px;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .description {
+    width: 60%;
+  }
+
+  .description h1 {
+    font-size: 4rem;
+    line-height: 4.4rem;
+    text-align: left;
+    padding: 0 0 0 72px;
+  }
+
+  .description h2 {
+    text-align: left;
+    padding: 0 200px 0 72px;
+    /* max-width: 80%; */
+  }
+
+  .form--container {
+    display: inline;
+  }
+
+  .form {
+    padding-left: 72px;
+    max-width: 520px;
+  }
+
+  .hero {
+    display: block;
+    width: 40%;
+  }
+
+  .hero img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .errTxt--container {
+    padding: 8px 0 0 72px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .desktop-logo img {
+    width: 320px;
+    padding-top: 36px;
+  }
+
+  .description h1 {
+    margin-top: 52px;
+    font-size: 5rem;
+    line-height: 5.4rem;
+  }
+
+  .description h2 {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
 }
