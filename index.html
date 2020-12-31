@@ -46,11 +46,22 @@
       </h2>
       <div class="form--container">
         <div class="form">
-          <input type="text" placeholder="Email Address" />
-          <button>
+          <input
+            onclick="focusInput()"
+            id="input"
+            type="text"
+            placeholder="Email Address"
+          />
+          <button onclick="validateTxt()">
             <img src="./images/icon-arrow.svg" alt="" />
           </button>
+          <span
+            ><img id="error" class="error" src="./images/icon-error.svg" alt=""
+          /></span>
         </div>
+      </div>
+      <div class="errTxt--container">
+        <p id="errTxt"></p>
       </div>
     </section>
   </body>
